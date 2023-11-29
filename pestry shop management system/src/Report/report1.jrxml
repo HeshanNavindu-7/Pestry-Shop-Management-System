@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null"  pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="93e5986c-6e67-43db-a1a3-ab4cc0f97963">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tblproduct.`item_id` AS tblproduct_item_id,
+     tblproduct.`item_name` AS tblproduct_item_name,
+     tblproduct.`catogary` AS tblproduct_catogary,
+     tblproduct.`quantity` AS tblproduct_quantity,
+     tblproduct.`unit_prie` AS tblproduct_unit_prie
+FROM
+     `tblproduct` tblproduct]]>
+	</queryString>
+	<field name="tblproduct_item_id" class="java.lang.Integer"/>
+	<field name="tblproduct_item_name" class="java.lang.String"/>
+	<field name="tblproduct_catogary" class="java.lang.String"/>
+	<field name="tblproduct_quantity" class="java.lang.Integer"/>
+	<field name="tblproduct_unit_prie" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="cc3f564f-ac3b-45d7-9c95-2bfc455b67bf" x="192" y="15" width="200" height="38"/>
+				<textElement>
+					<font fontName="Segoe UI" size="24"/>
+				</textElement>
+				<text><![CDATA[Product Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="e526ac16-648d-4cc9-b7dc-87dcfbe75381" x="0" y="24" width="58" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Item id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e526ac16-648d-4cc9-b7dc-87dcfbe75381" x="100" y="24" width="80" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Item Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e526ac16-648d-4cc9-b7dc-87dcfbe75381" x="221" y="24" width="58" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Catogary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e526ac16-648d-4cc9-b7dc-87dcfbe75381" x="455" y="24" width="58" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Unit Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e526ac16-648d-4cc9-b7dc-87dcfbe75381" x="343" y="24" width="58" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement uuid="043afca9-8238-4d20-841f-1c950ea78849" x="0" y="21" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tblproduct_item_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="977a7189-6055-48d8-88e3-9f9d3bbcc1b7" x="107" y="21" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tblproduct_item_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="11ff254a-3851-44e6-b7ea-f95ddfbd02e5" x="221" y="21" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tblproduct_catogary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5ab45e0b-01b2-4c9f-ac19-44274c020c09" x="343" y="21" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tblproduct_quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ef65efd6-b4c8-4100-973d-499fa6752033" x="455" y="21" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tblproduct_unit_prie}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
